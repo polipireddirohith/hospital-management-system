@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare Plus - Advanced Hospital Management System</title>
+    <meta name="description"
+        content="Comprehensive hospital management system offering world-class healthcare services including emergency care, specialized treatments, and patient management.">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="container nav-container">
+            <div class="logo">
+                <div class="logo-icon">
+                    <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" />
+                        <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </div>
+                <span class="logo-text">MediCare<span class="logo-plus">Plus</span></span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="#home" class="nav-link active">Home</a></li>
+                <li><a href="#services" class="nav-link">Services</a></li>
+                <li><a href="#departments" class="nav-link">Departments</a></li>
+                <li><a href="#doctors" class="nav-link">Doctors</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="btn-secondary" id="loginBtn">Login</button>
+                <button class="btn-primary" id="appointmentBtn">Book Appointment</button>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-background">
+            <img src="images/hero_hospital_main.png" alt="Modern Hospital" class="hero-bg-image">
+            <div class="hero-gradient"></div>
+            <div class="hero-pattern"></div>
+        </div>
+        <div class="container hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-icon">⭐</span>
+                    <span>Trusted by 50,000+ Patients</span>
+                </div>
+                <h1 class="hero-title">
+                    Your Health, Our <span class="gradient-text">Priority</span>
+                </h1>
+                <p class="hero-description">
+                    Experience world-class healthcare with cutting-edge technology, compassionate care, and a team of
+                    expert medical professionals dedicated to your well-being.
+                </p>
+                <div class="hero-buttons">
+                    <button class="btn-large btn-primary">
+                        <span>Book Appointment</span>
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 12H19M19 12L12 5M19 12L12 19" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" stroke-linejoin="round" />
+                        </svg>
+                    </button>
+                    <button class="btn-large btn-outline">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                            <path d="M10 8L16 12L10 16V8Z" fill="currentColor" />
+                        </svg>
+                        <span>Watch Video</span>
+                    </button>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat-item">
+                        <div class="stat-number">500+</div>
+                        <div class="stat-label">Expert Doctors</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">50K+</div>
+                        <div class="stat-label">Happy Patients</div>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat-item">
+                        <div class="stat-number">24/7</div>
+                        <div class="stat-label">Emergency Care</div>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-image">
+                <img src="https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?w=800&h=600&fit=crop"
+                    alt="Hospital Team" class="hero-main-image">
+                <div class="floating-card card-1">
+                    <div class="card-icon">💊</div>
+                    <div class="card-content">
+                        <div class="card-title">Pharmacy</div>
+                        <div class="card-subtitle">24/7 Available</div>
+                    </div>
+                </div>
+                <div class="floating-card card-2">
+                    <div class="card-icon">🏥</div>
+                    <div class="card-content">
+                        <div class="card-title">Emergency</div>
+                        <div class="card-subtitle">Instant Response</div>
+                    </div>
+                </div>
+                <div class="floating-card card-3">
+                    <div class="card-icon">👨‍⚕️</div>
+                    <div class="card-content">
+                        <div class="card-title">Expert Care</div>
+                        <div class="card-subtitle">500+ Doctors</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Services</span>
+                <h2 class="section-title">Comprehensive Healthcare Solutions</h2>
+                <p class="section-description">We provide a wide range of medical services with state-of-the-art
+                    facilities and experienced healthcare professionals</p>
+            </div>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/emergency_care_service.png" alt="Emergency Care">
+                    </div>
+                    <div class="service-icon emergency">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Emergency Care</h3>
+                    <p class="service-description">24/7 emergency services with rapid response team and advanced life
+                        support systems</p>
+                    <ul class="service-features">
+                        <li>Trauma Care</li>
+                        <li>Cardiac Emergency</li>
+                        <li>Ambulance Service</li>
+                    </ul>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/surgery_operation_service.png" alt="Surgery & Operation">
+                    </div>
+                    <div class="service-icon surgery">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M9 9L15 15M15 9L9 15" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Surgery & Operation</h3>
+                    <p class="service-description">Advanced surgical procedures with minimally invasive techniques and
+                        expert surgeons</p>
+                    <ul class="service-features">
+                        <li>General Surgery</li>
+                        <li>Laparoscopic Surgery</li>
+                        <li>Robotic Surgery</li>
+                    </ul>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/cardiology_service.png" alt="Cardiology">
+                    </div>
+                    <div class="service-icon cardiology">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M20.84 4.61C19.5 3.27 17.62 2.5 15.64 2.5C13.66 2.5 11.78 3.27 10.44 4.61L12 6.17L13.56 4.61C14.5 3.67 15.77 3.16 17.08 3.16C18.39 3.16 19.66 3.67 20.6 4.61C21.54 5.55 22.05 6.82 22.05 8.13C22.05 9.44 21.54 10.71 20.6 11.65L12 20.25L3.4 11.65C2.46 10.71 1.95 9.44 1.95 8.13C1.95 6.82 2.46 5.55 3.4 4.61C4.34 3.67 5.61 3.16 6.92 3.16C8.23 3.16 9.5 3.67 10.44 4.61L12 6.17"
+                                stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Cardiology</h3>
+                    <p class="service-description">Comprehensive heart care with advanced diagnostics and treatment
+                        options</p>
+                    <ul class="service-features">
+                        <li>ECG & Echo</li>
+                        <li>Angiography</li>
+                        <li>Cardiac Surgery</li>
+                    </ul>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/diagnostic_service.png" alt="Diagnostic Services">
+                    </div>
+                    <div class="service-icon diagnostic">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 6V12L16 14" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Diagnostic Services</h3>
+                    <p class="service-description">State-of-the-art diagnostic facilities with accurate and quick
+                        results</p>
+                    <ul class="service-features">
+                        <li>MRI & CT Scan</li>
+                        <li>X-Ray & Ultrasound</li>
+                        <li>Laboratory Tests</li>
+                    </ul>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="images/maternity_care_service.png" alt="Maternity Care">
+                    </div>
+                    <div class="service-icon maternity">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2ZM12 20C7.59 20 4 16.41 4 12C4 7.59 7.59 4 12 4C16.41 4 20 7.59 20 12C20 16.41 16.41 20 12 20Z"
+                                fill="currentColor" />
+                            <circle cx="12" cy="12" r="4" fill="currentColor" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Maternity Care</h3>
+                    <p class="service-description">Complete maternal and child healthcare with experienced gynecologists
+                    </p>
+                    <ul class="service-features">
+                        <li>Prenatal Care</li>
+                        <li>Delivery Services</li>
+                        <li>Postnatal Care</li>
+                    </ul>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1576602976047-174e57a47881?w=600&h=400&fit=crop"
+                            alt="Pharmacy">
+                    </div>
+                    <div class="service-icon pharmacy">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <rect x="3" y="3" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 7V17M7 12H17" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Pharmacy</h3>
+                    <p class="service-description">24/7 pharmacy services with genuine medicines and expert consultation
+                    </p>
+                    <ul class="service-features">
+                        <li>Prescription Medicines</li>
+                        <li>OTC Products</li>
+                        <li>Home Delivery</li>
+                    </ul>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1559757175-5700dde675bc?w=600&h=400&fit=crop"
+                            alt="Orthopedics">
+                    </div>
+                    <div class="service-icon orthopedic">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Orthopedics</h3>
+                    <p class="service-description">Expert bone and joint care with advanced treatment options</p>
+                    <ul class="service-features">
+                        <li>Joint Replacement</li>
+                        <li>Fracture Treatment</li>
+                        <li>Sports Medicine</li>
+                    </ul>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=600&h=400&fit=crop"
+                            alt="Neurology">
+                    </div>
+                    <div class="service-icon neurology">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <circle cx="12" cy="12" r="3" stroke="currentColor" stroke-width="2" />
+                            <path d="M12 2V9M12 15V22M2 12H9M15 12H22" stroke="currentColor" stroke-width="2" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Neurology</h3>
+                    <p class="service-description">Comprehensive neurological care with advanced brain and spine
+                        treatments</p>
+                    <ul class="service-features">
+                        <li>Brain Surgery</li>
+                        <li>Spine Treatment</li>
+                        <li>Neuro Rehabilitation</li>
+                    </ul>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+
+                <div class="service-card">
+                    <div class="service-image">
+                        <img src="https://images.unsplash.com/photo-1631217868264-e5b90bb7e133?w=600&h=400&fit=crop"
+                            alt="Pediatrics">
+                    </div>
+                    <div class="service-icon pediatric">
+                        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path
+                                d="M12 2C6.48 2 2 6.48 2 12C2 17.52 6.48 22 12 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 12 2Z"
+                                stroke="currentColor" stroke-width="2" />
+                            <circle cx="9" cy="10" r="1.5" fill="currentColor" />
+                            <circle cx="15" cy="10" r="1.5" fill="currentColor" />
+                            <path d="M8 15C8 15 9.5 17 12 17C14.5 17 16 15 16 15" stroke="currentColor" stroke-width="2"
+                                stroke-linecap="round" />
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Pediatrics</h3>
+                    <p class="service-description">Specialized child healthcare with experienced pediatricians</p>
+                    <ul class="service-features">
+                        <li>Child Vaccination</li>
+                        <li>Growth Monitoring</li>
+                        <li>Pediatric Surgery</li>
+                    </ul>
+                    <button class="service-btn">Learn More →</button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Departments Section -->
+    <section class="departments" id="departments">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Departments</span>
+                <h2 class="section-title">Specialized Medical Departments</h2>
+                <p class="section-description">Our hospital features specialized departments equipped with cutting-edge
+                    technology</p>
+            </div>
+            <div class="departments-grid">
+                <div class="department-card">
+                    <div class="department-number">01</div>
+                    <h3>Intensive Care Unit (ICU)</h3>
+                    <p>Advanced critical care with 24/7 monitoring and life support systems</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-number">02</div>
+                    <h3>Operation Theaters</h3>
+                    <p>State-of-the-art surgical facilities with modular OTs</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-number">03</div>
+                    <h3>Radiology</h3>
+                    <p>Advanced imaging with MRI, CT, and digital X-ray</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-number">04</div>
+                    <h3>Laboratory</h3>
+                    <p>Comprehensive pathology and diagnostic services</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-number">05</div>
+                    <h3>Blood Bank</h3>
+                    <p>24/7 blood banking services with component separation</p>
+                </div>
+                <div class="department-card">
+                    <div class="department-number">06</div>
+                    <h3>Physiotherapy</h3>
+                    <p>Rehabilitation and physical therapy services</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Doctors Section -->
+    <section class="doctors" id="doctors">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">Our Experts</span>
+                <h2 class="section-title">Meet Our Expert Doctors</h2>
+                <p class="section-description">Highly qualified medical professionals dedicated to your health</p>
+            </div>
+            <div class="doctors-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=400&h=400&fit=crop"
+                            alt="Dr. Rajesh Kumar" class="doctor-photo">
+                        <div class="doctor-badge">Chief Surgeon</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Rajesh Kumar</h3>
+                        <p class="doctor-specialty">Cardiothoracic Surgeon</p>
+                        <p class="doctor-experience">25+ Years Experience</p>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="stat-value">5000+</span>
+                                <span class="stat-label">Surgeries</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">4.9★</span>
+                                <span class="stat-label">Rating</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary">Book Appointment</button>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1594824476967-48c8b964273f?w=400&h=400&fit=crop"
+                            alt="Dr. Priya Sharma" class="doctor-photo">
+                        <div class="doctor-badge">Senior Consultant</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Priya Sharma</h3>
+                        <p class="doctor-specialty">Gynecologist & Obstetrician</p>
+                        <p class="doctor-experience">18+ Years Experience</p>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="stat-value">3500+</span>
+                                <span class="stat-label">Deliveries</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">4.8★</span>
+                                <span class="stat-label">Rating</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary">Book Appointment</button>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1622253692010-333f2da6031d?w=400&h=400&fit=crop"
+                            alt="Dr. Amit Patel" class="doctor-photo">
+                        <div class="doctor-badge">Specialist</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Amit Patel</h3>
+                        <p class="doctor-specialty">Neurologist</p>
+                        <p class="doctor-experience">15+ Years Experience</p>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="stat-value">4200+</span>
+                                <span class="stat-label">Patients</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">4.9★</span>
+                                <span class="stat-label">Rating</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary">Book Appointment</button>
+                    </div>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?w=400&h=400&fit=crop"
+                            alt="Dr. Sneha Reddy" class="doctor-photo">
+                        <div class="doctor-badge">Consultant</div>
+                    </div>
+                    <div class="doctor-info">
+                        <h3 class="doctor-name">Dr. Sneha Reddy</h3>
+                        <p class="doctor-specialty">Pediatrician</p>
+                        <p class="doctor-experience">12+ Years Experience</p>
+                        <div class="doctor-stats">
+                            <div class="stat">
+                                <span class="stat-value">6000+</span>
+                                <span class="stat-label">Children</span>
+                            </div>
+                            <div class="stat">
+                                <span class="stat-value">5.0★</span>
+                                <span class="stat-label">Rating</span>
+                            </div>
+                        </div>
+                        <button class="btn-primary">Book Appointment</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-wrapper">
+                <div class="contact-info">
+                    <span class="section-badge">Get In Touch</span>
+                    <h2 class="section-title">Contact Us</h2>
+                    <p class="section-description">Have questions? We're here to help 24/7</p>
+
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div>
+                                <h4>Emergency Hotline</h4>
+                                <p>+91 9876543210</p>
+                                <p>+91 9876543211</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div>
+                                <h4>Email Address</h4>
+                                <p>info@medicareplus.com</p>
+                                <p>emergency@medicareplus.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div>
+                                <h4>Hospital Address</h4>
+                                <p>123 Healthcare Avenue,</p>
+                                <p>Medical District, City - 400001</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">🕐</div>
+                            <div>
+                                <h4>Working Hours</h4>
+                                <p>24/7 Emergency Services</p>
+                                <p>OPD: Mon-Sat 9AM-8PM</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <h3>Send us a Message</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="tel" id="phone" placeholder="Phone Number" required>
+                        </div>
+                        <div class="form-group">
+                            <select id="department" required>
+                                <option value="">Select Department</option>
+                                <option value="emergency">Emergency</option>
+                                <option value="cardiology">Cardiology</option>
+                                <option value="neurology">Neurology</option>
+                                <option value="orthopedics">Orthopedics</option>
+                                <option value="pediatrics">Pediatrics</option>
+                                <option value="general">General Inquiry</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="footer-logo">
+                        <div class="logo-icon">
+                            <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M12 2L2 7V17L12 22L22 17V7L12 2Z" stroke="currentColor" stroke-width="2" />
+                                <path d="M12 8V16M8 12H16" stroke="currentColor" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <span class="logo-text">MediCare<span class="logo-plus">Plus</span></span>
+                    </div>
+                    <p class="footer-description">Providing world-class healthcare services with compassion, expertise,
+                        and cutting-edge technology.</p>
+                    <div class="social-links">
+                        <a href="#" class="social-link">FB</a>
+                        <a href="#" class="social-link">TW</a>
+                        <a href="#" class="social-link">IN</a>
+                        <a href="#" class="social-link">YT</a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#departments">Departments</a></li>
+                        <li><a href="#doctors">Doctors</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Emergency Care</a></li>
+                        <li><a href="#">Surgery</a></li>
+                        <li><a href="#">Cardiology</a></li>
+                        <li><a href="#">Diagnostics</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Patient Care</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">Book Appointment</a></li>
+                        <li><a href="#">Patient Portal</a></li>
+                        <li><a href="#">Health Records</a></li>
+                        <li><a href="#">Insurance</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare Plus. All rights reserved.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms of Service</a>
+                    <a href="#">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Appointment Modal -->
+    <div class="modal" id="appointmentModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModal">&times;</button>
+            <h2>Book an Appointment</h2>
+            <form class="appointment-form" id="appointmentForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientName">Full Name</label>
+                        <input type="text" id="patientName" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientAge">Age</label>
+                        <input type="number" id="patientAge" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="patientEmail">Email</label>
+                        <input type="email" id="patientEmail" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="patientPhone">Phone</label>
+                        <input type="tel" id="patientPhone" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="appointmentDept">Department</label>
+                        <select id="appointmentDept" required>
+                            <option value="">Select Department</option>
+                            <option value="cardiology">Cardiology</option>
+                            <option value="neurology">Neurology</option>
+                            <option value="orthopedics">Orthopedics</option>
+                            <option value="pediatrics">Pediatrics</option>
+                            <option value="gynecology">Gynecology</option>
+                            <option value="general">General Medicine</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="appointmentDate">Preferred Date</label>
+                        <input type="date" id="appointmentDate" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="appointmentReason">Reason for Visit</label>
+                    <textarea id="appointmentReason" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn-primary btn-full">Confirm Appointment</button>
+            </form>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
